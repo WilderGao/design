@@ -11,7 +11,6 @@ import java.util.concurrent.locks.ReentrantLock;
  */
 public class SingletonLock {
     private static SingletonLock singletonLock;
-    private static Integer index = 4;
     private static Lock lock = new ReentrantLock();
 
     private SingletonLock(){}
