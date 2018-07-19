@@ -20,5 +20,8 @@ public abstract class BaseObserver {
         this.subject = subject;
     }
 
+    /**
+     * 状态更新
+     */
     public abstract void update();
 }
