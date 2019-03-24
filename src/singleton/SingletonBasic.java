@@ -3,7 +3,7 @@ package singleton;
 /**
  * @author Wilder Gao
  * time:2018/7/19
- * description：单例模式最简单的写法
+ * description：简单懒汉式
  * motto: All efforts are not in vain
  */
 public class SingletonBasic {
@@ -11,6 +11,10 @@ public class SingletonBasic {
 
     private SingletonBasic(){}
 
+    /**
+     * 在单线程下没有什么问题，但是在多线程下可能存在两个线程同时进去if的情况
+     * @return
+     */
     public static SingletonBasic getInstance(){
         if (singletonBasic == null){
             singletonBasic = new SingletonBasic();
